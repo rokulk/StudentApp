@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+     
+    <bean id="loginActionBean" class="com.student.login.action.LoginAction">
+        <property name="userDao" ref="userDAO" />
+    </bean>      
+     
+    <bean id="userDAO" class="com.student.login.model.UserDao" />
+     
+    <bean id="studentRegistrationActionBean" class="com.student.reg.action.StudentRegistrationAction">
+        <property name="studentDao" ref="studentDAO" />
+    </bean>      
+     
+    <bean id="studentDAO" class="com.student.reg.model.StudentRegistrationDao" />
+         
+        
+</beans>
